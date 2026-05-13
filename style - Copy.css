@@ -40,6 +40,23 @@
     height: auto;
     vertical-align: middle;
 }
+.PH a {
+    color:rgba(255,188,189,1.00);
+}
+.PH .porn,
+.PH .hub {
+    transition: all 0s;
+}
+.PH a:hover .porn {
+    color:rgba(255,255,255,1.00);
+    text-shadow: 0 0 0;
+}
+.PH a:hover .hub {
+    background: rgba(255,125,25,1.00);
+    border-radius: 3px;
+    color: rgba(0,0,0,1.00);
+    text-shadow: 0 0 0;
+}
 .special {
     position: absolute;
     line-height: 1.5;
@@ -69,6 +86,7 @@ a {
     transition: 0.2s;
 }
 a:hover {
+    color: rgba(255,215,216,1.00);
     text-shadow: 0 0 5px rgba(255, 0, 0, 1);
 }
 #info {
