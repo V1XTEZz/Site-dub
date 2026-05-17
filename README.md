@@ -1,4 +1,6 @@
-# V1XTEZz's Angle - Official Site
+# V1XTEZz - Official Site (dublicate for open source)
 HTML, CSS &amp; JS made in Dreamweaver
 
-Here free code without resources.
+HTML - is empty (avoid scam)
+CSS - kinda different
+JS - no changes
