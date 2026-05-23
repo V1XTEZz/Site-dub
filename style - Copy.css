@@ -1,5 +1,9 @@
 body {
     background: 
+        repeating-radial-gradient(
+            circle at center top, 
+            transparent 10%,
+            rgba(255,255,255,0.01) 20%),
         linear-gradient(145deg, #0A0A0A, #262626);
     color: #DFDFDF;
 }
@@ -7,16 +11,18 @@ body {
     background: 
         radial-gradient(
             rgba(255,255,255,0.01) 0%, 
-            rgba(255,255,255,0.005) 50%, 
+            rgba(255,255,255,0.007) 40%, 
             transparent 60%);
     background-size: 150px 150px;
 }
 
 .scroll {
-    background: rgba(255,255,255,1);
+    background: rgba(0,0,0,1);
     border-radius: 5px;
     box-shadow: 0 0 10px 0 white;
-    color: black;
+    filter: invert(1);
+    padding: 2px;
+    vertical-align: middle;
 }
 .warning {
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
@@ -37,19 +43,22 @@ body {
 }
 
 .soclinks {
-    position: absolute;
-    line-height: 1.5;
-    top: 50%;
-    left: calc(50% + 270px);
-    transform: translateY(-50%);
-    text-align: left;
-    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-    text-shadow: 0 0 1px black;
+	position: absolute;
+	line-height: 1.5;
+	top: 15%;
+	left: calc(50% + 270px);
+	text-align: left;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-shadow: 0 0 1px black;
+	height: 727px;
 }
+
 #links {
-    padding-left: 8px;
-    padding-right: 10px;
+	margin: auto;
     padding-top: 5px;
+    padding-bottom: 5px;
+	padding-right: 10px;
+	padding-left: 4px;
     box-shadow: 0 0 5px rgba(255,255,255,1);
     background: rgba(255,255,255,0.05);
     border-radius: 10px;
@@ -61,43 +70,46 @@ body {
     vertical-align: middle;
     transition: 0.2s;
 }
-.links a:hover {
-    display: inline-block;
-    align-items: center;
-    transform: scale(1.1);
-    vertical-align: top;
-}
 .links:hover a {
-    filter: brightness(0.5) blur(1px);
+    filter: brightness(0.7) blur(1px) contrast(2) opacity(0.4);
 }
 .links a:hover {
-    filter: brightness(1) blur(0px);
+    filter: brightness(1) blur(0px) contrast(1);
+}
+.links:hover .PH {
+    filter: brightness(0.7) blur(1px) contrast(2) saturate(2) opacity(0.4);
+}
+.links .PH:hover {
+    filter: brightness(1) blur(0px) contrast(1);
 }
 #links a:hover img {
     width: 30px;
-}
-.PH{
-    padding-bottom: 5px;
+    z-index: inherit;
 }
 
-.PH a {
+.PH {
     color:rgba(255,188,189,1.00);
 }
 .PH .porn,
 .PH .hub {
-    transition: all 0s;
+    transition: all 0.2s;
 }
-.PH a:hover .porn {
+.PH:hover {
+	font-size: 120%;
+}
+.PH:hover .porn {
     color:rgba(255,255,255,1.00);
     text-shadow: 0 0 0;
     font-weight: bold;
 }
-.PH a:hover .hub {
+.PH:hover .hub {
     background: rgba(255,125,25,1.00);
     border-radius: 3px;
     color: rgba(0,0,0,1.00);
     text-shadow: 0 0 0;
     font-weight: bold;
+	padding-left: 1px;
+	padding-right: 1px;
 }
 
 .special {
@@ -153,12 +165,50 @@ a {
 a:hover {
     color: rgba(255,215,216,1.00);
     text-shadow: 0 0 5px rgba(255, 0, 0, 1);
-    font-size: 110%;
+    font-size: 115%;
+    text-decoration: none;
+}
+.img {
+	height: 300px;
+	width: 300px;
+	box-shadow: 0 0 0 2px white, 0 0 0 5px black;
+}
+audio {
+    width: 350px;
 }
 #info {
     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
     font-size: 120%;
 }
+.vom {
+	text-decoration: none;
+}
+.vom img {
+	width: 100px;
+	height: 100px;
+	margin-right: -17px;
+	margin-bottom: -8px;
+	margin-top: -15px;
+	transition: 0.2s;
+	border-radius: 100%;
+}
+.vom img:hover {
+	width: 120px;
+	height: 120px;
+}
+.vom:hover img {
+	width: 120px;
+	height: 120px;
+}
+
+.DloadONNG {
+    font-size: 60%;
+    color: rgba(100,100,100,1.00);
+}
+.DloadONNG a {
+    filter: saturate(0.5) brightness(0.8);
+}
+
 #v1xTAB {
     margin-left: 5%;
     font-style: italic;
@@ -174,36 +224,68 @@ a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
+.geo {
+    color: rgba(208,159,255,0.60);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.geo:hover {
+    padding-left: 3px;
+    padding-right: 4px;
+    background: 
+        linear-gradient(120deg, rgba(208,159,255,1), rgba(131,43,255,1.00));
+    border-radius: 5px;
+    color: rgba(0,0,0,1.00);
+    font-weight: bold;
+    text-shadow: 0 0 0px black;
+    text-decoration: none;
+}
+.geoTXT {
+	transition: 0.3s;
+}
+.geoTXT:hover {
+    margin-left: -2px;
+    transform: skewX(8deg);
+    color: rgba(0,0,0,1.00);
+    font-weight: bold;
+    display: inline-block;
+}
+.inspir .geo {
+    color:rgba(208,159,255,0.60);
+}
+.inspir .geo:hover {
+    color: rgba(0,0,0,1.00);
+}
+
 .preBtn {
     padding-right: 1%
 }
 button {
-    padding: 8px 16px;
+    padding: 6px 12px;
+    margin: auto;
     cursor: pointer;
     background: 
         linear-gradient(-45deg,#232323,#7A7A7A);
     color: white;
-    border: 1px solid #000000;
+	border: 1px solid black;
     border-radius: 10px;
-    box-shadow: -2px 2px 1px,
+    box-shadow: -2px 2px 0px white,
         inset -4px 3px 2px rgba(0,0,0,0.5);
     transition: 0.1s;
-    text-shadow: 0 -1px 2px rgba(0,0,0,0.5),
-        0 1px 2px rgba(0,0,0,0.5),
-        -1px 0 2px rgba(0,0,0,0.5),
-        1px 0 2px rgba(0,0,0,0.5);
+    text-shadow: 0 0 5px black;
+    font-size: 95%;
 }
 button.clicked {
     box-shadow: -1px 1px 2px 0 black,
         inset -2px 2px 1px rgba(0,0,0,0.5);
-    transform: scale(0.9);
-    filter: brightness(0.8)
-        blur(1px);
+    text-align: center;
+    filter: brightness(0.8) blur(1px);
+    font-size: 85%;
 }
 button:hover {
-    box-shadow: -2px 2px 1px,
+    box-shadow: -2px 2px 1px white,
         inset -4px 3px 1px rgba(0,0,0,0.5); 
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 #unreleasTrack {
@@ -233,6 +315,9 @@ content {
     border: 1%;
     border-radius: 3%;
 }
+.NnT a {
+    text-decoration: none;
+}
 .inspir {
     background: rgba(0,0,0,0.50);
     color: rgba(255,255,255,0.30);
@@ -246,6 +331,7 @@ content {
 }
 .inspir a:hover {
     color:rgba(255,214,214,0.75);
+    width: 110%;
 }
 .line {
     display: flex;
@@ -326,12 +412,22 @@ content {
     justify-content: space-between; 
 }
 #end {
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
     background: rgba(255,255,255,0.03);
 }
 #end a {
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 5px black;
 }
 #end a:hover {
-    text-shadow: 0 0 15px red;
+    text-shadow: 0 0 10px red;
+}
+
+video {
+	display: inline;
+	margin-left: 33%;
+	margin-bottom: -3%;
+	margin-top: -2%;
+	transform: scale(0.75);
+	width: 33%;
+	border-radius: 15px;
 }
