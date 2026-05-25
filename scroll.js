@@ -1,13 +1,11 @@
 function scrollToHighlight(id) {
     const el = document.getElementById(id);
 
-    // Прокрутка
     el.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
     });
 
-    // Небольшая задержка после скролла
     setTimeout(() => {
 
         el.classList.add('scroll');
@@ -20,11 +18,21 @@ function scrollToHighlight(id) {
 
                 setTimeout(() => {
                     el.classList.remove('scroll');
-                }, 200);
+                    
+                    setTimeout(() => {
+                        el.classList.add('scroll');
 
-            }, 150);
+                        setTimeout(() => {
+                            el.classList.remove('scroll');
+                        }, 250);
 
-        }, 150);
+                    }, 200);
+                    
+                }, 250);
 
-    }, 700);
+            }, 200);
+
+        }, 250);
+
+    }, 500);
 }
