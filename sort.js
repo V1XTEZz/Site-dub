@@ -69,12 +69,7 @@ toggleBtn.addEventListener('click', () => {
     isNewest = !isNewest;
     sortLines(isNewest ? 'newest' : 'oldest');
     toggleBtn.textContent = isNewest ? 'Sort "To Oldest"' : 'Sort "To Newest"';
-    toggleBtn.style.background = isNewest ? "linear-gradient(-45deg,#B3B3B3,#E0E0E0)" : "linear-gradient(-45deg,#232323,#7A7A7A)";
-    toggleBtn.style.fontStyle = isNewest ? "italic" : "normal";
-    toggleBtn.style.fontWeight = isNewest ? "bold" : "normal";
-    toggleBtn.style.color = isNewest ? "black" : "white";
-    toggleBtn.style.textShadow = isNewest ? "0 0 5px white" : "0 0 5px black";
-    toggleBtn.style.border = isNewest ? "1px solid white" : "1px solid black";
+	toggleBtn.classList.toggle("active", isNewest);
 });
 
 toggleBtn.addEventListener('mousedown', () => toggleBtn.classList.add('clicked'));
