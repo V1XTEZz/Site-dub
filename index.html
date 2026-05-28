@@ -6,20 +6,22 @@
     <script>
       (function () {
       var script = document.createElement('script');
-      script.src = 'volumeSync.js';
-      script.src = 'scroll.js';
-      script.src = 'SAP.js';
-      script.src = 'textHover.js';
-      script.src = 'sort.js';
+      // Path to script (choosing script)
+        script.src = 'volumeSync.js';
+        script.src = 'scroll.js';
+        script.src = 'SAP.js';
+        script.src = 'textHover.js';
+        script.src = 'sort.js';
 
-      script.onload = function () {
-      };
+        script.onload = function () {
+        };
 
-      script.onerror = function () {
-        alert("Error! JS not found / doesn't work. Try allow JS in JS blocker");
-      };
+        script.onerror = function () {
+          // Alert message
+          alert("Error! JS not found / doesn't work. Try allow JS in JS blocker");
+        };
 
-      document.head.appendChild(script);
+        document.head.appendChild(script);
       }());
     </script>
   </body>
